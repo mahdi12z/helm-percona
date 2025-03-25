@@ -106,7 +106,7 @@ kubectl exec -it my-db-pxc-db-pxc-0 -n percona-db -- mysql -uroot -p
 
 
 
-
+link:https://docs.percona.com/percona-operator-for-mysql/pxc/helm.html#pre-requisites
 
 
 
