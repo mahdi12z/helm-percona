@@ -47,11 +47,11 @@ kubectl create namespace percona-db
 helm install my-op percona/pxc-operator --namespace percona-db
 ```
 
-Install the Database using Helm:
+## 3:Install the Database using Helm:
 ```bash
 helm install my-db percona/pxc-db --namespace percona-db
 ```
-4: Verify the Deployment
+## 4: Verify the Deployment
 ```bash
 kubectl get pods -n percona-db
 kubectl get pxc -n percona-db
@@ -83,7 +83,7 @@ Retrieve the password for the root user. Replace the secret-name and namespace w
 kubectl get secret my-db-secrets -n percona-db -o jsonpath="{.data.root}" | base64 -d && echo
 ```
 
-6: Connect to MySQL Cluster:
+## 6: Connect to MySQL Cluster:
 for see cluster name
 ```bash
 kubectl get svc -n percona-db
