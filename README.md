@@ -80,7 +80,7 @@ kubectl get secrets -n percona-db
 
 Retrieve the password for the root user. Replace the secret-name and namespace with your values in the following commands:
 ```bash
-kubectl get secret my-db-secrets -n percona-db -o jsonpath="{.data.root}" | base64 -d && echo
+kubectl get secret my-db-pxc-db-secrets -n percona-db -o jsonpath="{.data.root}" | base64 -d && echo
 ```
 
 ## 6: Connect to MySQL Cluster:
