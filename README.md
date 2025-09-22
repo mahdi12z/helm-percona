@@ -126,7 +126,7 @@ mysql -h my-db-pxc-db-haproxy -uroot -p'v8R.>8S1%$_ncbhiDEz'
 ------
 -----
 
-expose
+## expose percona-db
 
 ```bash
 kubectl patch svc my-db-pxc-db-haproxy -n percona-db -p '{"spec": {"type": "LoadBalancer"}}'
@@ -134,6 +134,14 @@ kubectl patch svc my-db-pxc-db-haproxy -n percona-db -p '{"spec": {"type": "Load
 
 ```
 
+```bash
+kubectl get svc -n percona-db
+```
+
+```bash
+
+mysql -h <external-ip> -P 3306 -uroot -p'پسورد'
+```
 
 link:https://docs.percona.com/percona-operator-for-mysql/pxc/helm.html#pre-requisites
 
