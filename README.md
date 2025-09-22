@@ -105,8 +105,27 @@ kubectl exec -it my-db-pxc-db-pxc-0 -n percona-db -- mysql -uroot -p
 
 
 
+Or
+
+```bash
+
+kubectl run percona-client2 \
+  --image=percona:8.0 \
+  --restart=Never \
+  --namespace=percona-db \
+  --command -- bash -il
+```
+```bash
+kubectl exec -n percona-db -it percona-client2 -- bash -il
+```
+```bash
+mysql -h my-db-pxc-db-haproxy -uroot -p'v8R.>8S1%$_ncbhiDEz'
+```
+
+
 
 link:https://docs.percona.com/percona-operator-for-mysql/pxc/helm.html#pre-requisites
+
 
 
 
