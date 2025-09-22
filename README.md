@@ -109,14 +109,15 @@ Or
 
 ```bash
 
-kubectl run percona-client2 \
+kubectl run percona-client \
   --image=percona:8.0 \
-  --restart=Never \
   --namespace=percona-db \
-  --command -- bash -il
+  --restart=Never \
+  --command -- sleep infinity
 ```
 ```bash
-kubectl exec -n percona-db -it percona-client2 -- bash -il
+kubectl exec -n percona-db -it percona-client -- bash -il
+
 ```
 ```bash
 mysql -h my-db-pxc-db-haproxy -uroot -p'v8R.>8S1%$_ncbhiDEz'
