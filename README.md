@@ -123,6 +123,16 @@ kubectl exec -n percona-db -it percona-client -- bash -il
 mysql -h my-db-pxc-db-haproxy -uroot -p'v8R.>8S1%$_ncbhiDEz'
 ```
 
+------
+-----
+
+expose
+
+```bash
+kubectl patch svc my-db-pxc-db-haproxy -n percona-db -p '{"spec": {"type": "LoadBalancer"}}'
+
+
+```
 
 
 link:https://docs.percona.com/percona-operator-for-mysql/pxc/helm.html#pre-requisites
